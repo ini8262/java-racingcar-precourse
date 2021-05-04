@@ -1,5 +1,6 @@
 package racingcar;
 
+import java.util.Iterator;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.function.Consumer;
@@ -14,6 +15,10 @@ public class Racing {
 
     protected int size() {
         return cars.size();
+    }
+
+    protected Iterator<Car> iterator() {
+        return cars.iterator();
     }
 
     protected void participate(Car car) {

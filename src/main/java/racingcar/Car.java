@@ -2,9 +2,7 @@ package racingcar;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.ToString;
 
-@ToString
 @EqualsAndHashCode(of = "name")
 public class Car {
     protected static final int STOP_MAX = 3;
@@ -43,5 +41,10 @@ public class Car {
 
     private boolean isCarNameCondition(String name) {
         return name.length() < CAR_NAME_LENGTH_MIN || name.length() > CAR_NAME_LENGTH_MAX;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
